@@ -47,7 +47,7 @@ export default {
   computed: {
     //计算iconList的页数
     pages () {
-      console.log(this.iconList)
+      // console.log(this.iconList)
       const pages = [];
       if (this.iconList.length == 0) {
         return pages
@@ -60,7 +60,7 @@ export default {
         }
         pages[page].push(item)
       }
-      console.log(pages)
+      // console.log(pages)
 
       return pages
     }
