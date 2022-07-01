@@ -45,7 +45,7 @@ export default {
     //获取home数据
     getHomeInfo () {
 
-      axios.post("http://localhost:8080/api/home").then((res) => {
+      axios.get("http://localhost:8080/api/home").then((res) => {
         this.getHomeInfoSuc(res)
       })
 

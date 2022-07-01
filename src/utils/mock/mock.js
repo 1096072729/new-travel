@@ -103,6 +103,6 @@ let data = Mock.mock({
     "desc": "带宝贝观看演出，近距离体验艺术的无穷魅力"
   }]
 })
-Mock.mock(/api\/home/, 'post', () => { //三个参数。第一个：路径，第二个：请求方式post/get，第三个：回调，返回值
+Mock.mock(/api\/home/, 'get', () => { //三个参数。第一个：路径，第二个：请求方式post/get，第三个：回调，返回值
     return data
 })
