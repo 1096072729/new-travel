@@ -6,6 +6,7 @@ import './assets/styles/border.css'
 import './assets/styles/reset.css'
 import './assets/styles/iconfont/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import './utils/mock/mock.js'
 Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 

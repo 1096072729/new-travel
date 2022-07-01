@@ -24,17 +24,15 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         // pagination: '.swiper-pagination',
         loop: true
-      },
-      list: [{
-        id: 1, imgUrl: 'https://ad-dapp-osscp.qunarzz.com/ad_dapp_oss_oper/7603042338b1215e3e8c5a32fce67933.jpg'
-      }, {
-        id: 2, imgUrl: '	https://imgs.qunarzz.com/vs_ceph_vcimg/5be2601d1f921f166646b817459a2727.jpeg'
-      }]
+      }
     }
   },
   computed: {

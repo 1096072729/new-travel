@@ -1,6 +1,6 @@
 <template>
   <div class="home-icons">
-    <Swiper>
+    <Swiper v-if="this.iconList">
       <SwiperSlide
         v-for="(item,index) in pages"
         :key="index"
@@ -13,7 +13,7 @@
           <div class="icon-img">
             <img
               class='icon-img-content'
-              :src="icon.iconImg"
+              :src="icon.imgUrl"
               alt=""
             >
           </div>
@@ -37,30 +37,18 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
 
   name: "HomeIcons",
+  props: {
+    iconList: Array
+  },
   data () {
     return {
-      iconlist: [{ id: 1, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 2, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' }
-        ,
-      { id: 3, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 4, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 5, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 6, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' }
-        ,
-      { id: 7, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 8, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 9, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 10, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' }
-        ,
-      { id: 11, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
-      { id: 12, iconImg: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png', desc: '热门景点' },
 
-      ]
     }
   },
   computed: {
     pages () {
       const pages = [];
+
       for (let i = 0; i < this.iconlist.length; i++) {
         let item = this.iconlist[i];
         const page = Math.floor(i / 8)
@@ -89,6 +77,7 @@ export default {
 
 <style lang="scss">
 .home-icons {
+  overflow: hidden;
   margin-top: 0.1rem;
   .icon {
     float: left;
