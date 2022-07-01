@@ -7,7 +7,7 @@
       <ul>
         <li
           class="item"
-          v-for="item in scenicSpotsList "
+          v-for="item in recommendList "
           :key="item.id"
         >
           <img
@@ -16,7 +16,7 @@
             alt=""
           >
           <div class="scenic-spots-info">
-            <div class="scenic-spots-name">{{item.name}}</div>
+            <div class="scenic-spots-name">{{item.title}}</div>
             <div class="scenic-spots-desc">{{item.desc}}</div>
             <button class="scenic-spots-button">查看详情</button>
           </div>
@@ -34,14 +34,12 @@
 export default {
 
   name: "HomeRecommend",
+  props: {
+    recommendList: Array
+  },
   data () {
     return {
-      scenicSpotsList: [
-        { id: 1, name: '黄山', desc: '风景如画风景如画风景如画风景如画风景如画风景如画', imgUrl: 'https://img1.qunarzz.com/sight/p0/1911/46/469df4d45b3710b4a3.img.jpg_256x160_efae8956.jpg' },
-        { id: 2, name: '黄山', desc: '风景如画', imgUrl: 'https://img1.qunarzz.com/sight/p0/1911/46/469df4d45b3710b4a3.img.jpg_256x160_efae8956.jpg' },
-        { id: 3, name: '黄山', desc: '风景如画', imgUrl: 'https://img1.qunarzz.com/sight/p0/1911/46/469df4d45b3710b4a3.img.jpg_256x160_efae8956.jpg' },
-        { id: 4, name: '黄山', desc: '风景如画', imgUrl: 'https://img1.qunarzz.com/sight/p0/1911/46/469df4d45b3710b4a3.img.jpg_256x160_efae8956.jpg' },
-      ]
+
     }
   }
 
@@ -60,7 +58,6 @@ export default {
     display: flex;
     width: 100%;
     overflow: hidden;
-    display: flex;
     height: 1.9rem;
     padding-bottom: 0.1rem;
     min-width: 0;

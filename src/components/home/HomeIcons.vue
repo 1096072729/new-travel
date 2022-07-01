@@ -35,7 +35,6 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
-
   name: "HomeIcons",
   props: {
     iconList: Array
@@ -46,19 +45,23 @@ export default {
     }
   },
   computed: {
+    //计算iconList的页数
     pages () {
+      console.log(this.iconList)
       const pages = [];
-
-      for (let i = 0; i < this.iconlist.length; i++) {
-        let item = this.iconlist[i];
+      if (this.iconList.length == 0) {
+        return pages
+      }
+      for (let i = 0; i < this.iconList.length; i++) {
+        let item = this.iconList[i];
         const page = Math.floor(i / 8)
         if (!pages[page]) {
           pages[page] = []
         }
         pages[page].push(item)
       }
-
       console.log(pages)
+
       return pages
     }
   },
