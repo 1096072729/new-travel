@@ -11,9 +11,15 @@
         placeholder="输入热门旅游景点"
       >
     </div>
-    <div class="header-right">
+
+    <router-link
+      class="header-right"
+      tag="div"
+      to="/city"
+    >
       三亚<span class="iconfont">&#xe665;</span>
-    </div>
+    </router-link>
+
   </div>
 </template>
 
