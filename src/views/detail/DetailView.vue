@@ -6,7 +6,8 @@
       :bannerImg="bannerImg"
       :bannerImgs="gallaryImgs"
     ></detail-banner>
-
+    <detail-header></detail-header>
+    <div class="content"></div>
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 // @ is an alias to /src
 
 import DetailBanner from '@/views/detail/components/DetailBanner.vue'
+import DetailHeader from '@/views/detail/components/DetailHeader.vue'
 import axios from 'axios'
 // import { mapState } from 'vuex'
 
@@ -49,7 +51,8 @@ export default {
     this.getDetailInfo()
   },
   components: {
-    DetailBanner
+    DetailBanner,
+    DetailHeader
   }
 }
 </script>

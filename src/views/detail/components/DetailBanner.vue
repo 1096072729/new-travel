@@ -13,7 +13,7 @@
           {{this.sightName}}
         </div>
         <div class="banner-number">
-          <span class="iconfont banner-icon">&#xe692;</span>
+          <span class="iconfont banner-icon">&#xe63e;</span>
           {{this.bannerImgs.length}}
         </div>
       </div>
