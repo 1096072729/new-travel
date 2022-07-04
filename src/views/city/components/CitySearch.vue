@@ -76,7 +76,9 @@ export default {
   },
   mounted () {
 
-    this.BScroll = new BScroll(this.$refs.search)
+    this.BScroll = new BScroll(this.$refs.search, {
+      pullUpLoad: true, click: true
+    })
   }
 }
 </script>

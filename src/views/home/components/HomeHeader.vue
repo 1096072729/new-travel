@@ -17,16 +17,19 @@
       tag="div"
       to="/city"
     >
-      三亚<span class="iconfont">&#xe665;</span>
+      {{this.city}}<span class="iconfont">&#xe665;</span>
     </router-link>
 
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
 
