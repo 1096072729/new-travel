@@ -6,6 +6,13 @@
   "description": "travel练手项目icon",
   "glyphs": [
     {
+      "icon_id": "145454",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
       "icon_id": "629357",
       "name": "搜索",
       "font_class": "sousuo",

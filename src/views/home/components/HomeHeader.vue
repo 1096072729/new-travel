@@ -17,7 +17,8 @@
       tag="div"
       to="/city"
     >
-      {{this.city}}<span class="iconfont">&#xe665;</span>
+      {{this.city}}
+      <span class="iconfont">&#xe665;</span>
     </router-link>
 
   </div>

@@ -5,7 +5,11 @@
     </div>
     <div>
       <ul>
-        <li
+
+
+        <router-link
+          :to="'/detail/'+item.id"
+          tag="li"
           class="item"
           v-for="item in recommendList "
           :key="item.id"
@@ -20,7 +24,8 @@
             <div class="scenic-spots-desc">{{item.desc}}</div>
             <button class="scenic-spots-button">查看详情</button>
           </div>
-        </li>
+        </router-link>
+
       </ul>
 
     </div>

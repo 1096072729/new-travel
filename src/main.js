@@ -8,6 +8,7 @@ import './assets/styles/iconfont/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import './utils/mock/mock.js'
 import './utils/mock/mockCity.js'
+import './utils/mock/mockDetail.js'
 Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
  
