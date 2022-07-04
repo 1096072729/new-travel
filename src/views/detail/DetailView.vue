@@ -7,7 +7,9 @@
       :bannerImgs="gallaryImgs"
     ></detail-banner>
     <detail-header></detail-header>
-    <div class="content"></div>
+    <div class="content">
+      <detail-list :list="list"></detail-list>
+    </div>
   </div>
 </template>
 
@@ -16,6 +18,7 @@
 
 import DetailBanner from '@/views/detail/components/DetailBanner.vue'
 import DetailHeader from '@/views/detail/components/DetailHeader.vue'
+import DetailList from '@/views/detail/components/DetailList.vue'
 import axios from 'axios'
 // import { mapState } from 'vuex'
 
@@ -52,7 +55,8 @@ export default {
   },
   components: {
     DetailBanner,
-    DetailHeader
+    DetailHeader,
+    DetailList
   }
 }
 </script>
