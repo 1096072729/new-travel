@@ -76,7 +76,7 @@ export default {
     line-height: 0.6rem;
     color: #fff;
     background-image: linear-gradient(
-      top,
+      to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.8)
     );
